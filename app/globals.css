@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+padding: 0;
+margin: 0;
+scroll-behavior: smooth;
+}
+.modelbgimg{
+    animation: mainbgslidein 1.5s ease-out 1 forwards;
+}
+@keyframes mainbgslidein {
+    0%{
+        opacity: 0;
+        transform: translateX(40%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+.modelcontent{
+    animation: headslidein 1.5s ease-out  1 forwards ;
+}
+@keyframes headslidein {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.next .active{
+    z-index: 1;
+    animation: activecr 1200ms ease-in-out 1 forwards;
+}
+.prev .active{
+    z-index: 1;
+    animation: activecrl 1200ms ease-in-out 1 forwards;
+}
+@keyframes activecr {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+    
+}
+@keyframes activecrl {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+    
+}
+.next .other1{
+    z-index: 1;
+    animation: other1cr 1200ms ease-in-out 1 forwards;
+}
+.prev .other2{
+    z-index: 1;
+    animation: other1crl 1200ms ease-in-out 1 forwards;
+}
+@keyframes other1cr {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+@keyframes other1crl {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+    
+}
+.next .other2{
+    z-index: 1;
+    transform: translateX(100%);
+}
+.prev .other1{
+    transform: translateX(-100%);
+}
+.bgimg{
+    background: url("https://images3.alphacoders.com/135/1350069.jpeg") no-repeat center center/cover;
+    background-attachment: fixed;
+
+}
